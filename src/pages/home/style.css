@@ -1,0 +1,179 @@
+body {
+    color: #d1d1d1;
+    background-color: #111111;
+    margin: 0px 600px;
+    margin-top: 150px;
+}
+
+.max-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Inter';
+    width: 900px;
+}
+
+.mc-foto-perfil > img {
+    width: 140px;
+    border-radius: 0.875rem;
+    margin-bottom: 0.625rem;
+    filter: drop-shadow(0px 0 20px #4e4b6b);
+}
+
+.mc-name {
+    margin-bottom: 0.938rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.mc-biografia-1 {
+    margin-bottom: 0.625rem;
+}
+
+.mc-biografia-1 > p {
+    width: 85%;
+}
+
+.mc-biografia-2 {
+    margin-bottom: 20px;
+}
+
+.mc-biografia-2 > p {
+    width: 90%;
+}
+
+.mc-contato {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 270px;
+    margin-bottom: 25px;
+}
+
+.mc-contato > h2 {
+    font-weight: bold;
+}
+
+.mc-contato > a {
+    color: #d1d1d1;
+    background-color: #1f1f1f;
+
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+.mc-card > a > img {
+    width: 25px;
+}
+
+.mc-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 50px;
+    background-color: #1f1f1f;
+    border-style: solid;
+    border-color: #2c2c2c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 500ms linear;
+}
+
+.mc-card:hover {
+    color: #f3f3f3;
+    background-color: #272727; 
+
+    transform: scale(1.1);
+    
+}
+
+
+.mc-card > a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 1.1rem;
+}
+
+.mc-contatos-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 6.25rem;
+}
+
+.mc-card-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .max-container {
+        margin: 2%;
+    }
+
+    .mc-foto-perfil > img {
+        width: 70px;
+    }
+
+    .mc-name {
+        font-size: 0.8rem;
+    }
+
+    .mc-biografia-1 > p,
+    .mc-biografia-2 > p {
+        width: 100%;
+    }
+
+    .mc-contato > a {
+        margin-left: 0;
+    }
+
+    .mc-card > img {
+        width: 20px;
+    }
+
+    .mc-card > a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Media queries para telas ainda menores */
+@media screen and (max-width: 480px) {
+    .max-container {
+        margin: 1%;
+    }
+
+    .mc-foto-perfil > img {
+        width: 50px;
+    }
+
+    .mc-name {
+        font-size: 0.6rem;
+    }
+
+    .mc-biografia-1 > p,
+    .mc-biografia-2 > p {
+        width: 100%;
+    }
+
+    .mc-contato > a {
+        margin-left: 0;
+    }
+
+    .mc-card > img {
+        width: 15px;
+    }
+
+    .mc-card > a {
+        font-size: 0.7rem;
+    }
+}
