@@ -1,9 +1,43 @@
 body {
     color: #d1d1d1;
     background-color: #111111;
-    margin: 0px 600px;
-    margin-top: 150px;
+    margin: 0;
+    margin-top: 140px;
+    padding: 0;
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+body {
+    --sb-track-color: #111111;
+    --sb-thumb-color: #d1d1d1;
+    --sb-size: 13px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 41px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 41px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
 
 .max-container {
     display: flex;
@@ -12,19 +46,27 @@ body {
 
     font-family: 'Inter';
     width: 900px;
+    width: 100%; 
+    max-width: 900px;
+    padding: 0 20px; 
 }
 
 .mc-foto-perfil > img {
-    width: 140px;
+    width: 100%; 
+    max-width: 140px;
     border-radius: 0.875rem;
     margin-bottom: 0.625rem;
     filter: drop-shadow(0px 0 20px #4e4b6b);
 }
 
 .mc-name {
-    margin-bottom: 0.938rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
+}
+
+.mc-biografia-1 > p, .mc-biografia-2 > p {
+    width: 100%;  
 }
 
 .mc-biografia-1 {
@@ -45,9 +87,8 @@ body {
 
 .mc-contato {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 270px;
+    flex-wrap: wrap; 
+    gap: 20px; 
     margin-bottom: 25px;
 }
 
@@ -75,13 +116,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 10px 50px;
+    padding: 0.65em 2em;
     background-color: #1f1f1f;
     border-style: solid;
     border-color: #2c2c2c;
     border-radius: 10px;
     cursor: pointer;
     transition: 500ms linear;
+    max-width: 350px; 
+    flex: 1;
 }
 
 .mc-card:hover {
@@ -91,7 +134,6 @@ body {
     transform: scale(1.1);
     
 }
-
 
 .mc-card > a {
     display: flex;
@@ -105,7 +147,8 @@ body {
 .mc-contatos-cards{
     display: flex;
     flex-direction: row;
-    gap: 6.25rem;
+    gap: 1.875rem;
+    margin-bottom: 50px;
 }
 
 .mc-card-contato {
@@ -120,66 +163,54 @@ body {
     gap: 30px;
 }
 
-@media screen and (max-width: 768px) {
-    .max-container {
-        margin: 2%;
-    }
-
-    .mc-foto-perfil > img {
-        width: 70px;
-    }
-
-    .mc-name {
-        font-size: 0.8rem;
-    }
-
-    .mc-biografia-1 > p,
-    .mc-biografia-2 > p {
-        width: 100%;
-    }
-
-    .mc-contato > a {
-        margin-left: 0;
-    }
-
-    .mc-card > img {
-        width: 20px;
-    }
-
-    .mc-card > a {
-        font-size: 0.9rem;
-    }
+.mc-container-projeto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.mc-container-projeto > a {
+    background-color: #1f1f1f;
+    padding: 50px 300px;
+    text-decoration: none;
+    color: #d1d1d1;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #2c2c2c;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 90px 40px;
+}
 
-/* Media queries para telas ainda menores */
-@media screen and (max-width: 480px) {
-    .max-container {
-        margin: 1%;
-    }
+.mc-container-projeto:hover {
+    color: #f3f3f3;
+    text-decoration: underline;
+    transition: 500ms linear;
+}
+
+@media (max-width: 768px) {
+
 
     .mc-foto-perfil > img {
-        width: 50px;
+        max-width: 100%;
+    }
+    
+    .mc-contato {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mc-card {
+        max-width: 100%; 
     }
 
     .mc-name {
-        font-size: 0.6rem;
+        font-size: 1.2em; /* Reduzido o tamanho do nome em telas menores */
     }
-
-    .mc-biografia-1 > p,
-    .mc-biografia-2 > p {
-        width: 100%;
-    }
-
-    .mc-contato > a {
-        margin-left: 0;
-    }
-
-    .mc-card > img {
-        width: 15px;
-    }
-
-    .mc-card > a {
-        font-size: 0.7rem;
-    }
+    
+    .mc-container-projeto > a {
+        font-size: 1.2em; /* Reduzido o tamanho do texto do botão em telas menores */
+    }  
+    
 }
