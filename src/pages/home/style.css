@@ -97,7 +97,7 @@ body {
 }
 
 .mc-contato > a {
-    color: #d1d1d1;
+    background-color: #1f1f1f;
     background-color: #1f1f1f;
 
     padding: 5px 10px 5px 10px;
@@ -132,7 +132,6 @@ body {
     background-color: #272727; 
 
     transform: scale(1.1);
-    
 }
 
 .mc-card > a {
